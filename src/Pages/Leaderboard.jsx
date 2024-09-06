@@ -95,7 +95,7 @@ const Leaderboard = () => {
         </div>
 
         {/* Leaderboard */}
-        <div className="w-full h-96 border overflow-y-scroll">
+        <div className="w-full h-96  overflow-y-scroll">
           <div className="text-white mb-2">{users.length} holders</div>
           {users.map((user, index) => (
             <div
