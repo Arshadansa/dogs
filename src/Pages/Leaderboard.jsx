@@ -61,7 +61,7 @@ const Leaderboard = () => {
         className="flex items-center justify-center min-h-screen bg-black text-white"
       >
         {/* Replace with your loader animation or message */}
-        <div className="loader text-black font-bold">Loading...</div>
+        {/* <div className="loader text-black font-bold">Loading...</div> */}
       </div>
     );
   }

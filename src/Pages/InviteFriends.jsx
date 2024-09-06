@@ -73,47 +73,45 @@ const MemeStickers = () => {
   const closeModal = () => setShowModal(false);
 
   return (
-    <div className="bg-black min-h-screen flex flex-col justify-between text-white">
-      {/* Header section */}
-      <div className="flex flex-col justify-between h-20 items-start p-3 sm:p-4"></div>
+    <>
+      <div className="bg-black min-h-screen flex flex-col justify-between text-white">
+        <div className="flex flex-col flex-grow h-[100%] justify-between p-3 sm:p-4 bg-black rounded-t-2xl items-center">
+          {/* Invite Message */}
+          <div className="text-center flex flex-col gap-10 ">
+            <div>
+              <h2 className="text-4xl font-bold mt-2">Invite friends</h2>
+              <h2 className="text-4xl font-bold mb-4">and get more DOGS</h2>
+            </div>
+            <div className="flex justify-center mb-4">
+              <img
+                src={logo}
+                alt="Dog Logo"
+                className="w-40 h-40 object-contain"
+              />
+            </div>
+            <div>
+              <p className="text-xl font-medium">
+                Tap on the button to invite your
+              </p>
+              <p className="text-xl font-medium">friends</p>
+            </div>
+          </div>
 
-      {/* Main Content */}
-      <div className="flex flex-col flex-grow justify-between p-3 sm:p-4 bg-black rounded-t-2xl items-center">
-        {/* Invite Message */}
-        <div className="text-center flex flex-col gap-10 ">
-          <div>
-            <h2 className="text-4xl font-bold mb-4">Invite friends</h2>
-            <h2 className="text-4xl font-bold mb-4">and get more DOGS</h2>
-          </div>
-          <div className="flex justify-center mb-4">
-            <img
-              src={logo}
-              alt="Dog Logo"
-              className="w-40 h-40 object-contain"
-            />
-          </div>
-          <div>
-            <p className="text-xl font-medium">
-              Tap on the button to invite your
-            </p>
-            <p className="text-xl font-medium">friends</p>
+          {/* Invite Button */}
+          <div className="flex justify-center mb-20 w-full">
+            <button
+              onClick={openModal}
+              className="bg-white w-full font-bold text-black text-lg px-8 py-3 rounded-lg"
+            >
+              Invite friends
+            </button>
           </div>
         </div>
 
-        {/* Invite Button */}
-        <div className="flex justify-center mb-20 w-full">
-          <button
-            onClick={openModal}
-            className="bg-white w-full font-bold text-black text-lg px-8 py-3 rounded-lg"
-          >
-            Invite friends
-          </button>
-        </div>
+        {/* Modal */}
       </div>
-
-      {/* Modal */}
       <Modal showModal={showModal} closeModal={closeModal} userId={chatId} />
-    </div>
+    </>
   );
 };
 
