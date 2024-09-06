@@ -83,7 +83,7 @@ const MemeStickers = () => {
       } catch (error) {
         console.error("Error updating document:", error);
       }
-    }, 300), // Debounce delay in milliseconds
+    }, 3000), // Debounce delay in milliseconds
     []
   );
 
@@ -101,14 +101,14 @@ const MemeStickers = () => {
 
   return (
     <div className="bg-blue-600 min-h-screen flex flex-col justify-between text-white">
-      <div className="flex flex-col justify-between h-36 items-start p-3 sm:p-4 border-b border-blue-700">
+      <div className="flex flex-col justify-between h-[30%] items-start p-3 sm:p-4 border-b border-blue-700">
         <div className="w-full flex justify-center">
           <div className="flex pl-5 gap-2">
             <div>
               <img src={logo} className="h-12 w-12" alt="Logo" />
             </div>
             <div className="flex flex-col font-bold">
-              <span>Meme-stickers</span>
+              <span>More-BUGS</span>
               <span>are coming</span>
             </div>
           </div>
