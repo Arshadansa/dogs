@@ -69,7 +69,7 @@ const Leaderboard = () => {
   return (
     <div className="bg-black text-white min-h-screen px-3">
       {/* Header */}
-      <div className="flex flex-col justify-between h-20 items-start p-3 sm:p-4">
+      <div className="flex flex-col justify-between h-10 items-start p-3 sm:p-4">
         {/* Optional header content */}
       </div>
 
@@ -95,7 +95,7 @@ const Leaderboard = () => {
         </div>
 
         {/* Leaderboard */}
-        <div className="w-full h-full overflow-y-scroll">
+        <div className="w-full h-96 border overflow-y-scroll">
           <div className="text-white mb-2">{users.length} holders</div>
           {users.map((user, index) => (
             <div

@@ -98,7 +98,7 @@ const MemeStickers = () => {
           </div>
 
           {/* Invite Button */}
-          <div className="flex justify-center mb-20 w-full">
+          <div className="flex justify-center mb-[20%] w-full">
             <button
               onClick={openModal}
               className="bg-white w-full font-bold text-black text-lg px-8 py-3 rounded-lg"
