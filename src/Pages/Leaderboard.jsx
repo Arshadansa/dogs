@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { collection, getDocs } from "firebase/firestore"; // Firestore methods
 import { db } from "../FireBase"; // Firebase config
+import logo from "../Assets/Logo.webp";
 
 const Leaderboard = () => {
   const [users, setUsers] = useState([]);
   const [totalCoinsMined, setTotalCoinsMined] = useState(0); // State for total coins
+  const [loading, setLoading] = useState(true); // State for loading
 
   // Retrieve chatid and username from localStorage
   const chatId = localStorage.getItem("chatid");
@@ -14,12 +16,13 @@ const Leaderboard = () => {
   useEffect(() => {
     const fetchUsers = async () => {
       try {
+        setLoading(true); // Start loading
         const querySnapshot = await getDocs(collection(db, "chats"));
         const usersData = querySnapshot.docs.map((doc) => ({
           ...doc.data(),
           id: doc.id, // Include the document ID
         }));
-        
+
         // Filter out the current user
         const filteredUsers = usersData.filter(
           (user) => user.username !== username
@@ -30,21 +33,38 @@ const Leaderboard = () => {
         );
         setTotalCoinsMined(total);
         const sortedUsers = filteredUsers.sort((a, b) => {
-          // Convert to number if necessary
           const coinsA = Number(a.coinMined) || 0;
           const coinsB = Number(b.coinMined) || 0;
           return coinsB - coinsA;
         });
 
         setUsers(sortedUsers); // Set sorted and filtered users
-       
       } catch (error) {
         console.error("Error fetching users: ", error);
+      } finally {
+        setLoading(false); // Stop loading after fetching data
       }
     };
 
     fetchUsers();
   }, [username]);
+
+  if (loading) {
+    return (
+      <div
+        style={{
+          backgroundImage: `url(${logo})`, // Replace with your image path
+          backgroundSize: "contain",
+          backgroundPosition: "center",
+           backgroundRepeat:"no-repeat"
+        }}
+        className="flex items-center justify-center min-h-screen bg-black text-white"
+      >
+        {/* Replace with your loader animation or message */}
+        <div className="loader text-black font-bold">Loading...</div>
+      </div>
+    );
+  }
 
   return (
     <div className="bg-black text-white min-h-screen px-3">
@@ -64,7 +84,9 @@ const Leaderboard = () => {
                 {username ? username.slice(0, 2) : "N/A"}
               </div>
               <div>
-                <h2 className="font-semibold capitalize">{username || "N/A"}</h2>
+                <h2 className="font-semibold capitalize">
+                  {username || "N/A"}
+                </h2>
                 <p className="text-gray-400 text-sm">{chatId || "N/A"}</p>
               </div>
             </div>
@@ -73,7 +95,7 @@ const Leaderboard = () => {
         </div>
 
         {/* Leaderboard */}
-        <div className="w-full  h-full overflow-y-scroll">
+        <div className="w-full h-full overflow-y-scroll">
           <div className="text-white mb-2">{users.length} holders</div>
           {users.map((user, index) => (
             <div

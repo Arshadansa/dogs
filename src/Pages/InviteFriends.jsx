@@ -9,7 +9,7 @@ const Modal = ({ showModal, closeModal, userId }) => {
     navigator.clipboard
       .writeText(userLink)
       .then(() => {
-        alert("Invite link copied to clipboard!");
+        closeModal();
       })
       .catch((err) => {
         console.error("Failed to copy the text: ", err);
@@ -25,13 +25,14 @@ const Modal = ({ showModal, closeModal, userId }) => {
           url: userLink,
         })
         .then(() => {
+          closeModal();
           console.log("Successfully shared");
         })
         .catch((error) => {
           console.error("Something went wrong sharing the link", error);
         });
     } else {
-      alert("Sharing not supported, but you can copy the link!");
+      // alert("Sharing not supported, but you can copy the link!");
     }
   };
 
