@@ -11,7 +11,7 @@ const MemeStickers = () => {
   return (
     <div className="bg-black min-h-screen flex flex-col justify-between text-white">
       <div className="flex flex-col justify-between h-20 items-start p-3 sm:p-4  ">
-        <div className="w-full flex justify-between">
+        {/* <div className="w-full flex justify-between">
           <button className="text-white text-lg font-bold">Close</button>
           <div className="flex flex-col justify-center items-center space-x-1">
             <div className="flex items-center">
@@ -23,7 +23,7 @@ const MemeStickers = () => {
           <button className="text-white">
             <PiDotsThreeCircle size={24} className="text-white" />
           </button>
-        </div>
+        </div> */}
       </div>
 
       <div className="flex flex-col flex-grow  justify-between p-3 sm:p-4 bg-black rounded-t-2xl items-center">
