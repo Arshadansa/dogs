@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 function Footer() {
   return (
     <div className="fixed bottom-0 left-0 right-0 bg-black text-white py-2 flex justify-around">
-      <Link to={"/"}>
+      <Link to={"/home/:chatid/:username/:referralid"}>
         <button className="flex flex-col items-center">
           <RiHomeLine size={24} className="text-[#aeaeae]" />
           <span className="text-sm">Home</span>
