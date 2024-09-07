@@ -17,6 +17,11 @@ const App = () => {
             index
             element={<MemeStickers />}
           />
+              <Route
+            path="/home/:chatid/:username"
+            index
+            element={<MemeStickers />}
+          />
           <Route path="/invite" element={<InviteFriends />} />
           <Route path="/leaderboard" element={<Leaderboard />} />
         </Route>
