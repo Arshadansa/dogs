@@ -163,7 +163,7 @@ const MemeStickers = () => {
           <button className="bg-white  font-sans mt-12 w-[90%] font-bold text-black text-md py-2 rounded-xl">
             Connect wallet and claim
           </button>
-          <button className="bg-[#1c1c1e]  font-sans  mt-3 w-[90%] font-bold text-black text-md py-2 rounded-xl">
+          <button className="bg-[#1c1c1e]  font-sans  mt-3 w-[90%] font-bold text-white text-md py-2 rounded-xl">
             Claim hints
           </button>
         </div>
