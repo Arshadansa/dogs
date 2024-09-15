@@ -1,11 +1,18 @@
-import React from "react";
+import {React,useEffect} from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import MemeStickers from "./Pages/MemeStickers";
 import InviteFriends from "./Pages/InviteFriends";
 import Layout from "./Compoents/Layout"; // Import the layout
 import Leaderboard from "./Pages/Leaderboard";
-
+import { useExpand,useThemeParams } from "@vkruglikov/react-telegram-web-app";
 const App = () => {
+  const [isExpanded, expand] = useExpand();
+  useEffect(() => {
+    if (!isExpanded) {
+      expand();
+    }
+  }, [isExpanded, expand]);
+
   return (
     <Router>
       <Routes>
