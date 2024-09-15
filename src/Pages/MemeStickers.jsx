@@ -110,12 +110,12 @@ const MemeStickers = () => {
               <img src={logo} className="h-12 w-12" alt="Logo" />
             </div>
             <div className="flex font-sans flex-col text-white leading-3 font-bold text-sm sm:text-base md:text-lg lg:text-xl">
-              <span>Meme-stickers</span>
-              <span>are coming</span>
+              <span>Connect wallet </span>
+              <span>to Get 50$ reward</span>
             </div>
           </div>
           <div>
-            <button className="text-black font-sans bg-white rounded-3xl text-sm  px-3  font-medium ">
+            <button className="text-black font-sans bg-white rounded-3xl text-sm  px-3 py-2 font-medium ">
               Connect
             </button>
           </div>
@@ -125,7 +125,7 @@ const MemeStickers = () => {
       {/* Main Section */}
       <div className="flex flex-col    flex-grow  justify-evenly    bg-black rounded-t-2xl items-center ">
         <div>
-          <button className="text-black  font-sans flex gap-1 items-center bg-white rounded-full  text-sm font-semibold px-3 ">
+          <button className="text-black  font-sans flex gap-1 items-center bg-white rounded-full p-2 mt-2 text-sm font-semibold px-3 ">
             <CiWallet />
             Connect wallet
           </button>
