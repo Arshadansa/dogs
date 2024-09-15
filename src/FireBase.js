@@ -3,14 +3,15 @@ import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDrPct15A4up4rs12H4-K8eu4LbDP8Sn50",
-  authDomain: "dogs-4090b.firebaseapp.com",
-  projectId: "dogs-4090b",
-  storageBucket: "dogs-4090b.appspot.com",
-  messagingSenderId: "1062184675282",
-  appId: "1:1062184675282:web:cad103e2c2acb5821eca0b",
-  measurementId: "G-HJWW4X2WHN",
+  apiKey: "AIzaSyCgZhA0a0CwsxjSyQmQMGLP57A262A2c90",
+  authDomain: "bugs-3e2fb.firebaseapp.com",
+  projectId: "bugs-3e2fb",
+  storageBucket: "bugs-3e2fb.appspot.com",
+  messagingSenderId: "929409749404",
+  appId: "1:929409749404:web:1a2b1af542011e35a9b859",
+  measurementId: "G-D1LPGBMJWB"
 };
+
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
