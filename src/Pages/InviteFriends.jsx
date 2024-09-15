@@ -80,7 +80,7 @@ const MemeStickers = () => {
           <div className="text-center flex flex-col gap-10 ">
             <div>
               <h2 className="text-4xl font-bold mt-2">Invite friends</h2>
-              <h2 className="text-4xl font-bold mb-4">and get more DOGS</h2>
+              <h2 className="text-4xl font-bold mb-4">and get more Bugs</h2>
             </div>
             <div className="flex justify-center mb-4">
               <img
