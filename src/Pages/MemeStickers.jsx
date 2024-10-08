@@ -117,7 +117,7 @@ const MemeStickers = () => {
             </div>
             <div className="flex font-sans flex-col text-white leading-3 font-bold text-sm sm:text-base md:text-lg lg:text-xl">
               <span>Connect wallet </span>
-              <span>to Get 50$ reward</span>
+              {/* <span>to Get 50$ reward</span> */}
             </div>
           </div>
           <div>
